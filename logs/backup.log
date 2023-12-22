@@ -16,3 +16,9 @@ Backup Summary for localhost at 2023-12-15 06:00:02.848587
 Config  : /home/nam/frappe-bench/sites/localhost/private/backups/20231215_060002-localhost-site_config_backup.json 116.0B
 Database: /home/nam/frappe-bench/sites/localhost/private/backups/20231215_060002-localhost-database.sql.gz 279.4KiB
 Backup for Site localhost has been successfully completed
+self=$$; ( /usr/bin/mariadb-dump --user=_53a2862e64535b53 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _53a2862e64535b53 || kill $self ) | /usr/bin/gzip >> ./localhost/private/backups/20231222_180003-localhost-database.sql.gz
+
+Backup Summary for localhost at 2023-12-22 18:00:03.927511
+Config  : /home/nam/frappe-bench/sites/localhost/private/backups/20231222_180003-localhost-site_config_backup.json 116.0B
+Database: /home/nam/frappe-bench/sites/localhost/private/backups/20231222_180003-localhost-database.sql.gz 283.1KiB
+Backup for Site localhost has been successfully completed
