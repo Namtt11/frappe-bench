@@ -783,3 +783,148 @@ index modified(modified))
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
+2023-12-22 20:37:57,966 WARNING database DDL Query made to DB:
+create table `tabtest` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2023-12-22 20:38:43,538 WARNING database DDL Query made to DB:
+ALTER TABLE `tabtest` ADD COLUMN `barcode_gamg` longtext
+2023-12-22 21:00:49,346 WARNING database DDL Query made to DB:
+create table `tabHouseManaged` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`house` varchar(140),
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2023-12-22 21:00:49,489 WARNING database DDL Query made to DB:
+create table `tabWater Usage` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`last_meter_unit` int(11) NOT NULL DEFAULT 0,
+`current_meter_unit` int(11) NOT NULL DEFAULT 0,
+`total_unit` int(11) NOT NULL DEFAULT 0,
+`total_price` int(11) NOT NULL DEFAULT 0,
+`house` varchar(140),
+`user` varchar(140),
+`month` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2023-12-22 21:00:49,621 WARNING database DDL Query made to DB:
+create table `tabMonthly` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`month` varchar(140),
+`year` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2023-12-22 21:00:49,688 WARNING database DDL Query made to DB:
+create table `tabHouseManagement` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`user` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2023-12-22 21:46:26,709 WARNING database DDL Query made to DB:
+ALTER TABLE `tabHouseManaged` MODIFY `house` varchar(140) NOT NULL DEFAULT ''
+2023-12-22 21:46:26,820 WARNING database DDL Query made to DB:
+ALTER TABLE `tabWater Usage` MODIFY `total_unit` int(11) NOT NULL DEFAULT 0, MODIFY `total_price` int(11) NOT NULL DEFAULT 0, MODIFY `last_meter_unit` int(11) NOT NULL DEFAULT 0, MODIFY `current_meter_unit` int(11) NOT NULL DEFAULT 0
+2023-12-22 21:46:26,936 WARNING database DDL Query made to DB:
+ALTER TABLE `tabHouseManagement` ADD COLUMN `user_full_name` varchar(140)
+2023-12-23 21:15:11,778 WARNING database DDL Query made to DB:
+ALTER TABLE `tabWater Usage` MODIFY `current_meter_unit` int(11) NOT NULL DEFAULT 0, MODIFY `total_unit` int(11) NOT NULL DEFAULT 0, MODIFY `total_price` int(11) NOT NULL DEFAULT 0, MODIFY `last_meter_unit` int(11) NOT NULL DEFAULT 0
+2024-01-15 18:42:33,705 WARNING database DDL Query made to DB:
+ALTER TABLE `tabWater Usage` ADD COLUMN `paid` int(1) NOT NULL DEFAULT 0
+2024-01-15 18:42:33,712 WARNING database DDL Query made to DB:
+ALTER TABLE `tabWater Usage` MODIFY `total_unit` int(11) NOT NULL DEFAULT 0, MODIFY `last_meter_unit` int(11) NOT NULL DEFAULT 0, MODIFY `total_price` int(11) NOT NULL DEFAULT 0, MODIFY `current_meter_unit` int(11) NOT NULL DEFAULT 0
+2024-02-08 15:58:03,502 WARNING database DDL Query made to DB:
+ALTER TABLE `tabWater Usage` ADD COLUMN `date_recieve` date
+2024-02-08 15:58:03,509 WARNING database DDL Query made to DB:
+ALTER TABLE `tabWater Usage` MODIFY `last_meter_unit` int(11) NOT NULL DEFAULT 0, MODIFY `total_unit` int(11) NOT NULL DEFAULT 0, MODIFY `total_price` int(11) NOT NULL DEFAULT 0, MODIFY `current_meter_unit` int(11) NOT NULL DEFAULT 0
+2024-02-08 15:58:03,617 WARNING database DDL Query made to DB:
+create table `tabMeter Maintenance Cost` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`meter_cost_paid` varchar(140),
+`house` varchar(140),
+`date` date,
+`date_recieve` date,
+`month` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2024-02-15 17:42:52,981 WARNING database DDL Query made to DB:
+ALTER TABLE `tabMeter Maintenance Cost` ADD COLUMN `cost_paid` varchar(140), ADD COLUMN `transaction_date` date, ADD COLUMN `user` varchar(140)
+2024-02-15 17:42:53,114 WARNING database DDL Query made to DB:
+ALTER TABLE `tabHouse` ADD COLUMN `active` int(1) NOT NULL DEFAULT 0
